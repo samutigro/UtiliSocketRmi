@@ -18,3 +18,11 @@ public class Server {
         }
     }
 }
+
+/*se qualcosa non va controllare
+module prova3_RMI {
+    exports pack; // Export the 'pack' package
+    requires java.rmi; // Specify the dependency on the 'java.rmi' module
+}
+
+le classi che si spediscono devono implementare serializable*/
