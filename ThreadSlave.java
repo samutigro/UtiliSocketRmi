@@ -23,8 +23,20 @@ public class ThreadSlave extends Thread{
     }
 
     public void run(){
+        boolean finito = false;
+        String cmd = "";
         try{
             //qua metti ad esempio l'esecuzione di exec e la lettura dell'input dal client
+            while (!finito){
+                
+                    cmd = (String) in.readObject();
+               
+                if(cmd.equals("END")){
+                    finito=true;
+                }else{
+                    exec(cmd);         
+                }
+            }
         }catch (ClassNotFoundException | IOException e){
             e.printStackTrace();
         }finally {
