@@ -4,6 +4,7 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 public class ServerImpl extends UnicastRemoteObject implements RemoteInterface {
+	private static final long serialVersionUID = 1L;
 
     //qua metti il campo dell'oggetto passivo se serve
     protected ServerImpl() throws RemoteException {
@@ -26,4 +27,5 @@ module prova3_RMI {
     requires java.rmi; // Specify the dependency on the 'java.rmi' module
 }
 
-le classi che si spediscono devono implementare serializable*/
+le classi che si spediscono devono implementare serializable e avere private static final long serialVersionUID = 1L;
+*/
